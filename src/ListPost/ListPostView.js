@@ -1,6 +1,7 @@
-import Header from "../Header"
+import Modal from "../component/Modal/Modal";
+import Header from "../component/Header";
 
-const ListPostView = ({ blogData }) => {
+const ListPostView = ({ blogData, showModal, showUserPost, userPosts }) => {
     return (
         <div>
             <Header />
@@ -12,6 +13,7 @@ const ListPostView = ({ blogData }) => {
                                 <h1>
                                     {post.title}
                                     {post.user}
+
                                 </h1>
                             </div>
                             <p className="post-text">{post.text}</p>
@@ -19,6 +21,7 @@ const ListPostView = ({ blogData }) => {
                     ))
                 }
             </div>
+            <Modal showModal={showModal} userPosts={userPosts} />
         </div>
     );
 };

@@ -1,22 +1,28 @@
 import Header from "../../component/Header";
 
-const AddPostView = () => (
+const AddPostView = ({ onInputChange, handleSubmit }) => (
     <>
-        <Header />
-        <form>
+        <Header addLink />
+        <form onSubmit={handleSubmit}>
             <fieldset>
                 <label>Kullanıcı Adı:</label>
-                <label type="text" placeholder="Kullanıcı Adı Giriniz" />
+                <input
+                    onChange={(e) => onInputChange('user', e.target.value)}
+                    type="text" placeholder="Kullanıcı Adı Giriniz" />
             </fieldset>
             <fieldset>
                 <label>Başlık:</label>
-                <label type="text" placeholder="Kullanıcı Adı Giriniz" />
+                <input
+                    onChange={(e) => onInputChange('title', e.target.value)}
+                    type="text" placeholder="Kullanıcı Adı Giriniz" />
             </fieldset>
             <fieldset>
-                <label>Kullanıcı Adı:</label>
-                <textarea />
+                <label>Mesajınız:</label>
+                <textarea
+                    onChange={(e) => onInputChange('text', e.target.value)}
+                />
             </fieldset>
-            <button>Gönder</button>
+            <button type="submit">Gönder</button>
         </form>
     </>
 );

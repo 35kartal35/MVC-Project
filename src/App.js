@@ -1,7 +1,7 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AddPostController from './pages/AddPost/AddPostController';
-import ListPostContainer from './component/ListPost/ListPostContainer';
+import ListPostContainer from './ListPost/ListPostContainer';
 import './style/style.css'
 
 
