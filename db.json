@@ -1,0 +1,16 @@
+{
+    "post": [
+        {
+            "id": 1,
+            "user": "Bilal",
+            "title": "React Mvc Petter",
+            "text": "Ben bunu nasıl öğrenebilirim"
+        },
+        {
+            "id": 2,
+            "user": "ahmet",
+            "title": " Mvc Petter",
+            "text": "nasıl öğrenebilirim"
+        }
+    ]
+}
