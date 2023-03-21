@@ -1,13 +1,16 @@
 import React from 'react'
 
-const Modal = ([showModal, usersPosts]) => {
+const Modal = ({ showModal, userPosts }) => {
     return (
         <>
             {
                 showModal &&
-                <div className='modal'>
-                    <h2><span>{usersPosts[0].user} kullanıcısının gönderileri</span></h2>
-                    {usersPosts.map((post) => (
+                <div className="modal">
+                    <h2>
+                        <span>{userPosts[0].user}
+                            Kullanıcısının gönderileri
+                        </span></h2>
+                    {userPosts.map((post) => (
                         <div className='post' key={post.id}>
                             <h1>{post.title}</h1>
                             <h1>{post.text}</h1>
@@ -20,7 +23,7 @@ const Modal = ([showModal, usersPosts]) => {
             }
 
         </>
-    )
-}
+    );
+};
 
-export default Modal
+export default Modal;

@@ -6,6 +6,6 @@ class AddPostModel {
         text: '',
 
     };
-};
+}
 
 export default AddPostModel;
